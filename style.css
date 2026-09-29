@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #0f0f23, #1a1a3c, #2b1a3c);
+    overflow-x: hidden;
+}
+
+/* ✅ 100 RAINING FLOWERS */
+.flower-rain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.flower-rain span {
+    position: absolute;
+    top: -50px;
+    animation: fall linear infinite;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 4px rgba(255, 150, 200, 0.4));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+/* =========================
+   OPENING COVER
+========================= */
+.opening {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0f0f23, #1a1a3c, #2b1a3c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.opening.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+.cover {
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+.cover-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.cover h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ffd6e0;
+}
+
+.cover p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e0c8d0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.cover button {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #ec407a, #d81b60);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.35);
+    transition: all 0.3s ease;
+}
+
+.cover button:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   LETTER PAGE
+========================= */
+.letter-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.letter-page.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fffafc;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hearts-top {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card h1 {
+    text-align: center;
+    color: #d81b60;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ad1457;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* ✅ YOUR PICTURE — KEPT & STYLED */
+.picture {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.picture img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.2);
+}
+
+.message {
+    color: #5d2906;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.message p {
+    margin-bottom: 15px;
+}
+
+.song-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px dashed #f48fb1;
+}
+
+.song-section h3 {
+    color: #d81b60;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.song-section p {
+    color: #884466;
+    margin-bottom: 12px;
+}
+
+.song-section audio {
+    width: 100%;
+    border-radius: 25px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #ffd6e0;
+    font-size: 15px;
+}

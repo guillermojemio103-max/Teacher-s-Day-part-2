@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Ma'am Jay-Ann 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- RAINING FLOWERS — 100 PIECES -->
+    <div class="flower-rain" id="flowerRain"></div>
+
+    <!-- =========================
+         OPENING COVER
+    ========================= -->
+    <div class="opening" id="opening">
+        <div class="cover">
+            <div class="cover-icon">
+                💌
+            </div>
+            <h1>A Letter For You</h1>
+            <p>
+                A little appreciation for someone who makes
+                learning meaningful.
+            </p>
+            <button onclick="openLetter()">
+                Read My Letter
+            </button>
+        </div>
+    </div>
+
+    <!-- =========================
+         LETTER CONTENT
+    ========================= -->
+    <div class="letter-page" id="letterPage">
+        <div class="card">
+            <div class="hearts-top">
+                💗 💖 💓 💗 💖
+            </div>
+            <h1>
+                Happy Teachers Month! 💕
+            </h1>
+            <p class="subtitle">
+                From your student — Jem 💐
+            </p>
+
+            <!-- ✅ YOUR PICTURE — KEPT EXACTLY -->
+            <div class="picture">
+                <img src="g1.jpg" alt="For Ma'am Jay-Ann 🩷">
+            </div>
+
+            <!-- ✅ YOUR MESSAGE — KEPT EXACTLY -->
+            <div class="message">
+                <p>
+                    💗 D e a r &nbsp;&nbsp; M a ' a m &nbsp;&nbsp; J a y - A n n ,
+                </p>
+                <p>
+                    Hello po, it's me Jem! Happy Teachers Day po sa inyo! 💖
+                </p>
+                <p>
+                    Thank you po for being such a wonderful, kind,
+                    and patient teacher to me. 💓
+                </p>
+                <p>
+                    You don’t just teach lessons — you inspire me
+                    to do my best and believe in myself. 💗
+                </p>
+                <p>
+                    Your guidance stays with me, and I am so grateful
+                    for every advice and encouragement you give. 💕
+                </p>
+                <p>
+                    May you be blessed with good health, joy, and all
+                    the happiness you truly deserve.
+                    Thank you po for everything, Ma'am! 🥰
+                </p>
+                <p>
+                    With love and respect,
+                    <br>
+                    Jem 💝
+                </p>
+            </div>
+
+            <!-- ✅ SONG UPDATED -->
+            <div class="song-section">
+                <h3>
+                    🎵 💗 A Song for You 💗 🎵
+                </h3>
+                <p>
+                    Made with love just for you 💝
+                </p>
+                <audio controls>
+                    <source src="music.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                
+            </div>
+
+        </div>
+
+        <footer>
+            Made with 💖 love 💖 —
+            Happy Teachers Month 2026 💗
+        </footer>
+    </div>
+
+    <!-- =========================
+         JAVASCRIPT — ALL KEPT
+    ========================= -->
+    <script>
+        function openLetter() {
+            const opening = document.getElementById("opening");
+            const letterPage = document.getElementById("letterPage");
+            opening.classList.add("hide");
+            setTimeout(function () {
+                letterPage.classList.add("show");
+            }, 600);
+        }
+
+        // 100 Raining Flowers — KEPT
+        const flowerRain = document.getElementById('flowerRain');
+        const flowerTypes = ['🌸', '🌷', '🌺', '🌹', '💐', '🌼', '🌻', '💮'];
+        for (let i = 0; i < 100; i++) {
+            const flower = document.createElement('span');
+            flower.innerText = flowerTypes[Math.floor(Math.random() * flowerTypes.length)];
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.animationDuration = (Math.random() * 5 + 4) + 's';
+            flower.style.animationDelay = Math.random() * 6 + 's';
+            flower.style.fontSize = (Math.random() * 16 + 14) + 'px';
+            flowerRain.appendChild(flower);
+        }
+    </script>
+
+</body>
+</html>
